@@ -1,0 +1,285 @@
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #4559e0;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.header {
+    background: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #1769AA;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #2496E8;
+}
+
+/* NAVIGATION */
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #172B42;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #2496E8;
+}
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    background: #1769AA;
+    color: white;
+    padding: 13px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #104D80;
+}
+
+/* HERO */
+
+.hero {
+    background: #F1F7FC;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: #1769AA;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 20px auto 30px;
+    color: #64748b;
+}
+
+.eyebrow {
+    color: #1769AA;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+/* SERVICES */
+
+.services {
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #64748b;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-item {
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e1eaf2;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.service-item h3 {
+    color: #1769AA;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.service-item a {
+    color: #1769AA;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ABOUT */
+
+.about {
+    background: #F1F7FC;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: #64748b;
+}
+
+/* CONTACT */
+
+.contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #102B46;
+    color: white;
+    text-align: center;
+    padding: 35px 0;
+}
+
+.footer p {
+    color: #c4d5e6;
+    font-size: 14px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .about h2 {
+        font-size: 28px;
+    }
+}
+
+/* MOBILE NAVIGATION */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        background: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
